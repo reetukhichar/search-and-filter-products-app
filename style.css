@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:ital,wght@0,300;1,300&family=Piazzolla:ital,wght@0,300;0,400;0,800;1,200&family=Poppins:wght@100;200;300;400&family=Roboto:wght@300&family=Source+Code+Pro:wght@300&family=Ubuntu:ital@1&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+.app{
+    padding: 20px 30px;
+}
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    border: 1.5px solid rgb(193, 25, 3);
+    width: 600px;
+    margin: auto;
+    border-radius: 4px;
+    padding: 0 10px;
+    color: rgb(193, 44, 3);
+}
+.fa-solid{
+    font-size: 20px;
+}
+input{
+    outline: none;
+    padding: 10px;
+    border: none;
+    font-size: 18px;
+    font-weight: 900;
+    background: transparent;
+    width: 100%;
+    color: rgb(193, 44, 3);
+}
+input::placeholder{
+    color: rgb(193, 44, 3);
+    opacity: 0.5;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+.card{
+    display: flex;
+    min-height: 150px;
+    width: 600px;
+    border-radius: 5px;
+    box-shadow: 0 7px 32px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+.card:hover{
+    transform: scale(1.02);
+    transition: 0.3s ease-in;
+}
+.product{
+    flex: 1;
+    border-right: 0.5px solid black;
+    padding: 10px 30px;
+}
+.product img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.description{
+    display: flex;
+    flex-direction: column;
+    flex: 5;
+    padding: 20px 20px;
+    line-height: 17px;
+    gap: 3px;
+}
+.description h2{
+    font-size: 16px;
+    font: bold;
+}
+.description p{
+    font-size: 13px;
+    opacity: 0.7;
+}
+.description button{
+    padding: 7px 18px;
+    color: white;
+    background-color: rgb(193, 44, 3);
+    border: none;
+    border-radius: 3px;
+    font-size: 19px;
+    align-self: end;
+    margin-top: 15px;
+    transition: 0.2s ease-in;
+    cursor: pointer;
+}
+.description button:hover{
+    background-color: rgb(178, 45, 9);
+    transform: scale(1.03);
+    transition: 0.3s ease-in;
+}
+
+@media (max-width: 630px) {
+    .search {
+        width: 100%;
+    }
+    .card{
+        width: 90%;
+    }
+}
+@media (max-width: 425px) {
+    .card{
+        flex-direction: column;
+    }
+    .product{
+        border-right: none;
+    }
+    .description button{
+        align-self: stretch;
+    }
+}
